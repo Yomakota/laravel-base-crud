@@ -15,7 +15,10 @@
                 <a href="{{ route('home') }}">Home</a>
             </li>
             <li>
-                <a href="{{ route('comics.index') }}">Prodotti</a>
+                <a href="{{ route('comics.index') }}">Products</a>
+            </li>
+            <li>
+                <a href="{{ route('comics.create') }}">Create your product</a>
             </li>
         </ul>
     </header>

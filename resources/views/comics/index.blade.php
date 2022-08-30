@@ -2,7 +2,6 @@
 
 @section('main_content')
     <h1>All comics</h1>
-
     @foreach ($comics as $item)
         <div>
             <div><span>Title:</span>{{ $item->title }}</div>
@@ -15,6 +14,9 @@
             <div><span>Series:</span>{{ $item->series }}</div>
             <div><span>Sale Date:</span>{{ $item->sale_date }}</div>
             <div><span>Type:</span>{{ $item->type }}</div>
+            <div>
+                <a href="{{ route('comics.show', [$item->id]) }}"> Details</a>
+            </div>
             <br>
         </div>
     @endforeach

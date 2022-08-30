@@ -10,7 +10,14 @@
 
 <body>
     <header>
-        This is for Header
+        <ul>
+            <li>
+                <a href="{{ route('home') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ route('comics.index') }}">Prodotti</a>
+            </li>
+        </ul>
     </header>
     <main>
         @yield('main_content')

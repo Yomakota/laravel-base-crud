@@ -5,7 +5,6 @@
         <h1>
             Edit product
         </h1>
-        {{-- {{ dd($comics) }} --}}
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>

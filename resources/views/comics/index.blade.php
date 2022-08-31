@@ -4,7 +4,7 @@
     <div class="main-container">
         <h1>All comics</h1>
         @foreach ($comics as $item)
-            <div class="products">
+            <div class="products card p-3">
                 <div><span>Title:</span>{{ $item->title }}</div>
                 <div><span>Description:</span>{{ $item->description }}</div>
                 <div>
@@ -21,7 +21,14 @@
                 <div>
                     <a href="{{ route('comics.edit', [$item->id]) }}"> Edit</a>
                 </div>
-                <br>
+                <div>
+                    <form action="{{ route('comics.destroy', [$item->id]) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input class="btn btn-link" type="submit" value="DELETE"
+                            onClick="return confirm('Are you sure to delete this comic book?')">
+                    </form>
+                </div>
             </div>
         @endforeach
     </div>

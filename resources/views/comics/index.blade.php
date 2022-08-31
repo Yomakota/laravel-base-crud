@@ -18,6 +18,9 @@
                 <div>
                     <a href="{{ route('comics.show', [$item->id]) }}"> Details</a>
                 </div>
+                <div>
+                    <a href="{{ route('comics.edit', [$item->id]) }}"> Edit</a>
+                </div>
                 <br>
             </div>
         @endforeach

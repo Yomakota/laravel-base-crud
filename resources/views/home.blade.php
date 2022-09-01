@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('main_content')
-    <div class="main-container">
-        <h1>Homepage</h1>
+    <div class="container">
+        <h1 class="text-uppercase text-center">Homepage</h1>
     </div>
 @endsection

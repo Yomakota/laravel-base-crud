@@ -9,18 +9,19 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <div class="header-container">
-            <ul>
+<body class="bg-warning bg-gradient">
+    <header class="bg-info p-3">
+        <div class="container">
+            <ul class="row row-cols-4 list-unstyled justify-content-center">
                 <li>
-                    <a href="{{ route('home') }}">Home</a>
+                    <a class="btn btn-outline-light" href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('comics.index') }}">Products</a>
+                    <a class="btn btn-outline-light" href="{{ route('comics.index') }}">Products</a>
                 </li>
                 <li>
-                    <a href="{{ route('comics.create') }}">Create your product</a>
+                    <a class="btn btn-outline-light" href="{{ route('comics.create') }}">Create your
+                        product</a>
                 </li>
             </ul>
         </div>
@@ -28,10 +29,10 @@
     <main>
         @yield('main_content')
     </main>
-    <footer>
-        <span>
-            Footer
-        </span>
+    <footer class="bg-info p-3">
+        <div class="container">
+            <span class="text-white">Footer</span>
+        </div>
     </footer>
 </body>
 

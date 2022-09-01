@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('main_content')
-    <div class="main-container">
-        <h1>
+    <div class="container">
+        <h1 class="text-uppercase text-center">
             Edit product
         </h1>
         @if ($errors->any())
             <div class="alert alert-danger">
-                <ul>
+                <ul class="list-unstyled">
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>
         @endif
-        <form action="{{ route('comics.update', $comics->id) }}" method="post">
+        <form class="p-3" action="{{ route('comics.update', ['comic' => $comics->id]) }}" method="post">
             @csrf
             @method('PUT')
             <div class="form-floating mb-3">
@@ -34,7 +34,7 @@
                 <label for="price">Price</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{ $comics->sale_date }}">
+                <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{ $comics->sale_date }}">
                 <label for="sale_date">Date Sale</label>
             </div>
             <div class="form-floating mb-3">

@@ -3,6 +3,11 @@
 @section('main_content')
     <h1 class="bg-danger text-uppercase text-center text-white p-3">All comic books</h1>
     <div class="container fw-bold">
+        @if ($deleted === 'yes')
+            <div class="alert alert-success text-center" role="alert">
+                Product deteled correctly
+            </div>
+        @endif
         <div class="row row-cols-5 justify-content-center">
             @foreach ($comics as $item)
                 <div class="col shadow-lg m-3">

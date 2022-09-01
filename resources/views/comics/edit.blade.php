@@ -67,7 +67,9 @@
             @enderror
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"> value="{{ old('description') ? old('description') : $comics->description }}"></textarea>
+                <textarea class="form-control" id="description" name="description" rows="3">
+                    {{ old('description') ? old('description') : $comics->description }}">
+                </textarea>
             </div>
             @error('description')
                 <div class="alert alert-danger">{{ $message }}</div>

@@ -3,6 +3,9 @@
     <h1 class="bg-danger text-uppercase text-center text-white p-3">
         {{ $comics->title }}
     </h1>
+    <div class="p-2">
+        <a class="btn btn-outline-success fs-3" href="{{ route('comics.index') }}">Back to products</a>
+    </div>
     <div class="container p-3">
         <div class="row p-4 justify-content-center">
             <div class="col-4">

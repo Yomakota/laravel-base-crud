@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('main_content')
+    <h1 class="bg-danger text-uppercase text-center text-white p-3">All comic books</h1>
     <div class="container fw-bold">
-        <h1 class="text-uppercase text-center bg-danger">All comic books</h1>
         <div class="row row-cols-5 justify-content-center">
             @foreach ($comics as $item)
                 <div class="col shadow-lg m-3">

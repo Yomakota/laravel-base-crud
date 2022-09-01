@@ -9,24 +9,13 @@
     <title>Document</title>
 </head>
 
-<body class="bg-warning bg-gradient">
+<body>
     <header class="bg-info p-3">
         <div class="container">
-            <ul class="row row-cols-4 list-unstyled justify-content-center">
-                <li>
-                    <a class="btn btn-outline-light" href="{{ route('home') }}">Home</a>
-                </li>
-                <li>
-                    <a class="btn btn-outline-light" href="{{ route('comics.index') }}">Products</a>
-                </li>
-                <li>
-                    <a class="btn btn-outline-light" href="{{ route('comics.create') }}">Create your
-                        product</a>
-                </li>
-            </ul>
+            <a class="btn btn-outline-light" href="{{ route('home') }}">Home</a>
         </div>
     </header>
-    <main>
+    <main class="bg-warning">
         @yield('main_content')
     </main>
     <footer class="bg-info p-3">

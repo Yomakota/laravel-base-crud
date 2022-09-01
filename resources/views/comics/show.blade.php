@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('main_content')
+    <h1 class="bg-danger text-uppercase text-center text-white p-3">
+        {{ $comics->title }}
+    </h1>
     <div class="container">
-        <h1 class="text-uppercase text-center">
-            {{ $comics->title }}
-        </h1>
         <div>
             <div class="p-3 text-center">
                 <img src="{{ $comics->thumb }}" alt="{{ $comics->title }}">

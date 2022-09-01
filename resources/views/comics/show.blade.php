@@ -4,18 +4,21 @@
         {{ $comics->title }}
     </h1>
     <div class="p-2">
-        <a class="btn btn-outline-success fs-3" href="{{ route('comics.index') }}">Back to products</a>
+        <a class="btn btn-outline-success fs-3 text-uppercase" href="{{ route('comics.index') }}">Back to comics</a>
+    </div>
+    <div class="p-2">
+        <a class="btn btn-outline-success fs-3 text-uppercase" href="{{ route('comics.edit', [$comics->id]) }}"> edit
+            comic</a>
     </div>
     <div class="container p-3">
         <div class="row p-4 justify-content-center">
             <div class="col-4">
                 <img src="{{ $comics->thumb }}" alt="{{ $comics->title }}" class="w-75">
             </div>
-            <div
-                class="col-4 bg-success opacity-75 fs-3 d-flex flex-column align-items-center justify-content-center text-start ">
+            <div class="col-4 bg-success opacity-75 fs-3 d-flex flex-column align-items-center justify-content-center">
                 <div>
                     <span class="fw-bold">Price:</span>
-                    <span>{{ $comics->price }}</span>
+                    <span> € {{ $comics->price }}</span>
                 </div>
                 <div>
                     <span class="fw-bold">Series:</span>
